@@ -22,6 +22,14 @@ git pull
 # git checkout HEAD file/to/restore
 ```
 
+## 添加公钥后仍然需要用户名和密码
+* 这种问题只出现在https方式clone
+* 修改项目配置文件
+```git
+git clone https://github.com/Name/project.git
+git clone git@github.com:Name/project.git
+```
+
 # 设置
 
 ## 每个项目设置自己的用户名和邮箱
@@ -50,3 +58,4 @@ git config --global core.quotepath false
 ```bash
 git config --global color.ui true
 ```
+
