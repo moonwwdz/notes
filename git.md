@@ -58,4 +58,16 @@ git config --global core.quotepath false
 ```bash
 git config --global color.ui true
 ```
+## 使用icdiff做对比
 
+1. 添加一人脚本，内容为
+   ```bash
+   #!/bin/bash
+   icdiff $2 $5
+   ```
+2. 修改`~/.gitconfig`
+   ```bash
+   [diff]
+	   #使用icdiff来取代git内建的diff
+		external = ~/project/git-icdiff.sh
+   ```
