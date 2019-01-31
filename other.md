@@ -1,3 +1,6 @@
+# 快捷链接
+[Tmux快捷键列表](https://gist.github.com/ryerh/14b7c24dfd623ef8edc7)
+
 # Golang
 
 ## 交差编译
