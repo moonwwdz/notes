@@ -1,6 +1,8 @@
 # 快捷链接
 [Tmux快捷键列表](https://gist.github.com/ryerh/14b7c24dfd623ef8edc7)
+
 [乌云文章列表](https://wooyun.js.org/)
+
 [FRP设置例子](https://www.xyzbeta.com/460)
 
 # Golang
@@ -26,3 +28,33 @@
 # 如果你想在Linux 64位系统下运行
 ➜  ~CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build test.go
 ```
+
+# wls
+
+## 开机启动，并执行脚本
+
+1 创建`wsl-ubuntu-init.vbs`脚本
+```vbs
+# win10中创建vbs脚本
+Set ws = CreateObject("Wscript.Shell")
+ws.run "bash -c 'sh /home/wangc/init.sh'",vbhide
+```
+
+2 在子系统中创建`init.sh`脚本
+```bash
+# 子系统中创建开机启动脚本
+#!/bin/sh
+
+sudo service ssh start
+sudo service nginx start
+
+$SHELL
+```
+3 vbs脚本添加到开机启动中
+
+ * `win+r` + `shell:startup`
+
+
+
+
+
