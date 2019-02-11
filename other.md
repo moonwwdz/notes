@@ -1,5 +1,7 @@
 # 快捷链接
 [Tmux快捷键列表](https://gist.github.com/ryerh/14b7c24dfd623ef8edc7)
+[乌云文章列表](https://wooyun.js.org/)
+[FRP设置例子](https://www.xyzbeta.com/460)
 
 # Golang
 

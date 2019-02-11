@@ -12,4 +12,15 @@
 -Dfile.encoding=UTF-8
 ```
 
+## SpringBoot热更新
+ - 先在pom文件中添加依赖
+```java
+<!-- 热加载 -->
+<dependency>
+	<groupId>org.springframework</groupId>
+	<artifactId>springloaded</artifactId>
+	<version>1.2.6.RELEASE</version>
+</dependency>
+```
+ - 再点`Build Project` 就是锤子图标
 
