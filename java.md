@@ -24,3 +24,21 @@
 ```
  - 再点`Build Project` 就是锤子图标
 
+## Mybatis
+
+### 大小写转义
+
+- 方式1、转义字符
+	```xml
+	<select id="searchByPrice" parameterType="Map" resultType="Product">
+	    <!-- 方式1、转义字符 -->
+		select * from Product where price &gt;= #{minPrice} and price &lt;= #{maxPrice}
+    </select>
+	```
+- 方式2、标记CDATA
+  ```xml
+  <select id="searchByPrice" parameterType="Map" resultType="Product">
+    <!-- 方式2、CDATA -->
+	<![CDATA[select * from Product where price >= #{minPrice} and price <= #{maxPrice} ]]>
+  </select>
+  ```

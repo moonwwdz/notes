@@ -43,6 +43,7 @@
  - [x] Linux Shell 脚本攻略
  - [x] Java8 实战
  - [ ] Java并发编程实战
+ - [ ] 深入理解Java虚拟机：JVM高级特性与最佳实践 *周志明* :hourglass:
 
 -----
 
