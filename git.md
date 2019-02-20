@@ -29,7 +29,18 @@ git pull
 git clone https://github.com/Name/project.git
 git clone git@github.com:Name/project.git
 ```
+## 分支
 
+### 刷新远程分支
+```bash
+git fetch origin
+```
+
+### 拉取远程分支内容
+
+```bash
+git checkout -t origin/2.0.0
+```
 # 设置
 
 ## 每个项目设置自己的用户名和邮箱
