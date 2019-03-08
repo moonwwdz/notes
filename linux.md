@@ -44,4 +44,13 @@
 ```bash
 nc -vz 104.160.40.250 5000-5025
 ```
+### systemctl
 
+```
+ # 所有状态
+ systemctl list-unit-files | grep suninfo
+ # 激活开机启动
+ systemctl enable suninfo-dbaudit.service
+ # 关闭开机启动
+ systemctl disenable suninfo-dbaudit.service
+```
