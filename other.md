@@ -58,3 +58,19 @@ $SHELL
 
 
 
+# python
+
+## [打包为exe程序](https://www.zhihu.com/question/281858271/answer/611320245)
+```python
+#建立虚拟环境
+pipenv install
+#进入虚拟环境（上一步可省略,因为没有虚拟环境的话会自动建立一个）
+pipenv shell
+#安装模块
+pip install requests pyquery pysimplegui fake_useragent
+#打包的模块也要安装
+pip install pyinstaller
+#开始打包
+pyinstaller -Fw E:\test\url_crawler.py
+
+```
