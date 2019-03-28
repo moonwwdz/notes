@@ -74,3 +74,17 @@ pip install pyinstaller
 pyinstaller -Fw E:\test\url_crawler.py
 
 ```
+
+# 网络
+
+## URL传参（数组）
+
+`String params = "access_key=123456xxx&operation=addUser&param_info[test]=111&param_info[test2]=222";`
+
+
+# docker
+
+## 备份还原镜像
+
+docker save -O image-name.tar xxx/xxx
+docker load --input image-name
