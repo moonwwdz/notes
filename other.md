@@ -5,6 +5,15 @@
 
 [FRP设置例子](https://www.xyzbeta.com/460)
 
+# MySQL
+
+## 常用的排查语句
+```sql
+-- 查看当前所有执行的进程
+show full processlist;
+-- 查看表锁的原因
+SHOW ENGINE INNODB STATUS \G 
+```
 # Golang
 
 ## 交差编译
@@ -85,6 +94,8 @@ pyinstaller -Fw E:\test\url_crawler.py
 # docker
 
 ## 备份还原镜像
-
+```bash
 docker save -O image-name.tar xxx/xxx
 docker load --input image-name
+```
+
