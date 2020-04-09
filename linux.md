@@ -55,6 +55,18 @@
 ```bash
 nc -vz 104.160.40.250 5000-5025
 ```
+
+### sed 
+批量替换，删除一些文字
+```bash
+sed -i '/192.168/d;/10.147/d' ./hosts-restricted
+sed -i 's/aaa/AAA/g;s/bbb/BBB/;s/ccc/CCC/' file.txt
+```
+### xargs
+批量删除文件里的多个字符
+```bash
+ls ./* | xargs -i sed -i '/192.168/d;/10.147/d' {}
+```
 ### systemctl
 
 * 常用命令
