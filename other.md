@@ -37,7 +37,15 @@ SHOW ENGINE INNODB STATUS \G
 # 如果你想在Linux 64位系统下运行
 ➜  ~CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build test.go
 ```
-
+## 安装常用插件
+```bash
+go get golang.org/x/tools/cmd/goimports
+go get golang.org/x/tools/cmd/godoc
+go get github.com/rogpeppe/godef
+go get golang.org/x/tools/cmd/guru
+go get golang.org/x/lint/golint
+go get github.com/nsf/gocode
+```
 # wls
 
 ## 开机启动，并执行脚本
