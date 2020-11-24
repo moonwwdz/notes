@@ -12,7 +12,9 @@
 -- 查看当前所有执行的进程
 show full processlist;
 -- 查看表锁的原因
-SHOW ENGINE INNODB STATUS \G 
+SHOW ENGINE INNODB STATUS \G; 
+-- 查看事务
+SELECT * FROM INFORMATION_SCHEMA.INNODB_TRX;
 ```
 # Golang
 
@@ -89,7 +91,6 @@ pip install requests pyquery pysimplegui fake_useragent
 pip install pyinstaller
 #开始打包
 pyinstaller -Fw E:\test\url_crawler.py
-
 ```
 
 # 网络
