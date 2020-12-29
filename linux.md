@@ -61,6 +61,11 @@ nc -vz 104.160.40.250 5000-5025
 sed -i '/192.168/d;/10.147/d' ./hosts-restricted                                                                                                                                                                                                                             
 sed -i 's/aaa/AAA/g;s/bbb/BBB/;s/ccc/CCC/' file.txt                                                                                                                                                                                                                          
 ```                                                                                                                                                                                                                                                                          
+查看指定行数的文件内容
+```bash
+sed 'n,m!d' file
+
+```
 ### xargs                                                                                                                                                                                                                                                                    
 批量删除文件里的多个字符                                                                                                                                                                                                                                                     
 ```bash                                                                                                                                                                                                                                                                      
