@@ -43,6 +43,10 @@
 ### 画图(dot)
  - `sudo apt-get install graphviz`
  - `brew install graphviz`
+
+### zsh
+ - git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+ - .zshrc中修改 plugins=(其他的插件 zsh-autosuggestions)
 -----------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -70,17 +74,20 @@ sed 'n,m!d' file
 批量删除文件里的多个字符                                                                                                                                                                                                                                                     
 ```bash                                                                                                                                                                                                                                                                      
 ls ./* | xargs -i sed -i '/192.168/d;/10.147/d' {} 
+```
 
 ### systemctl
 
 * 常用命令
-```
+```bash
  # 所有状态
  systemctl list-unit-files | grep suninfo
  # 激活开机启动
  systemctl enable suninfo-dbaudit.service
  # 关闭开机启动
  systemctl disenable suninfo-dbaudit.service
+ # 查看日志
+ journalctl -u service-name.service -b
 ```
 
 * 简单模板
@@ -109,3 +116,19 @@ ls ./* | xargs -i sed -i '/192.168/d;/10.147/d' {}
 "设置全局Python路径
 let g:ycm_server_python_interpreter='/usr/bin/python3.6'"
 ```
+
+## 硬盘
+
+### 分区操作
+
+* 选择磁盘 fdisk /dev/sda
+* 所有分区 p
+* 创建分区 n
+* 保存分区 w
+* 删除分区 d
+
+### 重新加载磁盘信息
+  partprobe /dev/sdb
+
+### 格式化磁盘（不格式化不能挂载）
+  mkfs -t ext4 /dev/sdb1
