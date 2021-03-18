@@ -15,6 +15,9 @@ show full processlist;
 SHOW ENGINE INNODB STATUS \G; 
 -- 查看事务
 SELECT * FROM INFORMATION_SCHEMA.INNODB_TRX;
+-- 清理bin日志
+purge master logs before'2021-03-17 22:20:00';
+
 ```
 # Golang
 
